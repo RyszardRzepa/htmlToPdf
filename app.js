@@ -4,7 +4,7 @@ const port = process.env.PORT || 3001;
 const puppeteer = require('puppeteer')
 const hb = require('handlebars')
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
   const { emailHtml } = req.body || {};
   
   if(!email) {
