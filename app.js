@@ -16,7 +16,7 @@ app.post("/", async (req, res) => {
   }
 
   const data = {};
-  const template = hb.compile(email, { strict: true });
+  const template = hb.compile(emailHtml, { strict: true });
   const result = template(data);
   const html = result;
 
