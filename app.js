@@ -3,6 +3,9 @@ const app = express();
 const port = process.env.PORT || 3001;
 const puppeteer = require('puppeteer')
 const hb = require('handlebars')
+var bodyParser = require('body-parser')
+
+app.use(bodyParser.json())
 
 app.post("/", async (req, res) => {
   const { emailHtml } = req.body || {};
