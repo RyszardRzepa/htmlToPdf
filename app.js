@@ -5,6 +5,13 @@ const puppeteer = require('puppeteer')
 const hb = require('handlebars')
 
 app.get("/", (req, res) => {
+  const { emailHtml } = req.body || {};
+  
+  if(!email) {
+    res.status(400).send("Missing emailHtml")
+    return;
+  }
+
   const data = {};
   const template = hb.compile(email, { strict: true });
   const result = template(data);
