@@ -7,7 +7,7 @@ const hb = require('handlebars')
 app.get("/", async (req, res) => {
   const { emailHtml } = req.body || {};
   
-  if(!email) {
+  if(!emailHtml) {
     res.status(400).send("Missing emailHtml")
     return;
   }
