@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
-import puppeteer from 'puppeteer'
-import hb from 'handlebars'
+const puppeteer require('puppeteer')
+const hb = require('handlebars')
 
 app.get("/", (req, res) => {
   const data = {};
